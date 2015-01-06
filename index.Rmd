@@ -70,7 +70,7 @@ Phasellus in gravida sapien. Vestibulum dictum dui nec purus lobortis, in auctor
 *** {name: map}
 
 ### Park Map
-```{r overview, results='asis'}
+```{r overview, results='asis', message=FALSE, echo=FALSE}
 map <- Leaflet$new()
 map$setView(c(46.59, -112.027), zoom = 13)
 map$marker(c(46.56916, -112.0291), bindPopup = "Mount Ascension")
@@ -80,7 +80,7 @@ map
 ```
 
 ### Trail Map
-```{r ascension}
+```{r ascension, results='asis', message=FALSE, echo = FALSE}
 m1 <- get_map(c(lon=-112.0291, lat=46.56916), zoom = 15, maptype = "satellite")
 ggmap(m1) + 
   geom_path(aes(x = lon, y = lat), data = y[1:666, ], size = I(1.5))
