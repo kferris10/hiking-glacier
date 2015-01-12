@@ -13,7 +13,7 @@ layout      : hike
 assets      :
   css       : "assests/css/custom.css"
 ---
-```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE}
 library(knitr)
 library(plotKML)
 library(ggplot2)
@@ -22,7 +22,7 @@ library(dplyr)
 library(rCharts)
 library(rMaps)
 opts_chunk$set(message = F, warning = F, echo = F, tidy = F, 
-               fig.align = "center")
+               fig.align = "center", cache = FALSE)
 x <- readGPX("ascension.gpx", metadata = F)
 y <- x$tracks[[1]][[1]] %>% tbl_df()
 z <- geocode("helena, mt")
@@ -80,7 +80,7 @@ map
 ```
 
 ### Trail Map
-```{r ascension, results='asis', message=FALSE, echo = FALSE}
+```{r ascension, results='asis', message=FALSE, echo = FALSE, eval = F}
 m1 <- get_map(c(lon=-112.0291, lat=46.56916), zoom = 15, maptype = "satellite")
 ggmap(m1) + 
   geom_path(aes(x = lon, y = lat), data = y[1:666, ], size = I(1.5))

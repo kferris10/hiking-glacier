@@ -57,10 +57,10 @@ Phasellus in gravida sapien. Vestibulum dictum dui nec purus lobortis, in auctor
 *** {name: map}
 
 ### Park Map
-<iframe src=' assets/fig/overview.html ' scrolling='no' frameBorder='0' seamless class='rChart leaflet ' id=iframe- chart1bd0793646e3 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+<iframe src=' assets/fig/overview-1.html ' scrolling='no' frameBorder='0' seamless class='rChart leaflet ' id=iframe- chart14d052a250c5 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 ### Trail Map
-![plot of chunk ascension](assets/fig/ascension.png) 
+
 
 
 
